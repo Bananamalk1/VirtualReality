@@ -1,5 +1,3 @@
-
-js
 class Rocket {
     constructor(x, y, z) {
         this.x = x;
