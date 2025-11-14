@@ -1,17 +1,21 @@
+
+
 let maze = [
-  "xxxxxxxxxxxxxxxxxxxxxx",
-  "x----T--------TTTTTTxx",
-  "x----xx--------------x",
-  "x--------xx--xx--T---x",
-  "x-----------T--------x",
-  "x--T---xx-------T----x",
-  "x-----------------xx-x",
-  "x--xxxxxxxx---T-xx---x",
-  "x-----T--T----xxxx---x",
-  "x------xx----x---x---x",
-  "x-------TTT---xx-----x",
-  "xxxxxxxxxxx-xxxxxxxxxx",
+  "--------------x-------",
+  "-----------x----------",
+  "----------------------",
+  "----------x--x--------",
+  "--x-------------------",
+  "----x-------------x---",
+  "------------------x---",
+  "------x-----------x---",
+  "----------------x-----",
+  "-----------x----------",
+  "---------x------------",
+  "------------x---------",
 ];
+
+
 let scene;
 
 window.addEventListener("DOMContentLoaded",function() {
@@ -21,7 +25,7 @@ window.addEventListener("DOMContentLoaded",function() {
     let cols = row.split("");
     for(let c = 0; c < cols.length; c++){
       if(cols[c] == "x"){
-        new Block(c,1,r)
+        new Wall(c,1,r)
       }
       else if(cols[c] == "T"){
         new Tree(c,1,r);
@@ -29,7 +33,7 @@ window.addEventListener("DOMContentLoaded",function() {
         new Rock(c,1,r)
       }
     }
-
+    
   }
 
 })
